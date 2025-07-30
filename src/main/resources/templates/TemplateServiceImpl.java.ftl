@@ -34,8 +34,8 @@ import java.util.stream.Collectors;
 /**
  * ${dataName}服务实现
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://www.code-nav.cn">编程导航学习圈</a>
+
+
  */
 @Service
 @Slf4j
@@ -191,7 +191,7 @@ public class ${upperDataKey}ServiceImpl extends ServiceImpl<${upperDataKey}Mappe
         if (loginUser != null) {
             Set<Long> ${dataKey}IdSet = ${dataKey}List.stream().map(${upperDataKey}::getId).collect(Collectors.toSet());
             loginUser = userService.getLoginUser(request);
-            // 获取点赞
+            //
             QueryWrapper<${upperDataKey}Thumb> ${dataKey}ThumbQueryWrapper = new QueryWrapper<>();
             ${dataKey}ThumbQueryWrapper.in("${dataKey}Id", ${dataKey}IdSet);
             ${dataKey}ThumbQueryWrapper.eq("userId", loginUser.getId());
